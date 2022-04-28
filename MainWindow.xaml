@@ -18,6 +18,11 @@
         <Button x:Name="btnZapiszJSON" Content="Zapisz JSON" HorizontalAlignment="Left" Height="40" Margin="524,112,0,0" VerticalAlignment="Top" Width="81" Click="btnZapiszJSON_Click"/>
         <Button x:Name="btnWczytajJSON" Content="Wczytaj JSON" HorizontalAlignment="Left" Height="37" Margin="524,163,0,0" VerticalAlignment="Top" Width="81" Click="btnWczytajJSON_Click"/>
         <Button x:Name="btnZapisDoPliku" Content="Zapis do pliku" HorizontalAlignment="Left" Height="40" Margin="375,32,0,0" VerticalAlignment="Top" Width="100" Click="btnZapisDoPliku_Click"/>
+        <Button x:Name="btnWybierz" Content="Wybierz" HorizontalAlignment="Left" Margin="643,32,0,0" VerticalAlignment="Top" Width="103" Height="53" Click="btnWybierz_Click"/>
+        <Label x:Name="lblSzerokosc" Content="Label" HorizontalAlignment="Left" Height="29" Margin="643,102,0,0" VerticalAlignment="Top" Width="92"/>
+        <Label x:Name="lblWysokosc" Content="Label" HorizontalAlignment="Left" Height="32" Margin="643,145,0,0" VerticalAlignment="Top" Width="92"/>
+        <Label x:Name="lblKolor" Content="Label" HorizontalAlignment="Left" Height="35" Margin="643,182,0,0" VerticalAlignment="Top" Width="103"/>
+        <Image x:Name="imgBmp" HorizontalAlignment="Left" Height="106" Margin="643,239,0,0" VerticalAlignment="Top" Width="121"/>
 
     </Grid>
 </Window>

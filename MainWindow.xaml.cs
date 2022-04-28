@@ -19,7 +19,8 @@ using Microsoft.Win32;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-
+using System.Drawing;
+using ControlzEx.Standard;
 
 namespace lab7
 {
@@ -204,6 +205,27 @@ namespace lab7
         {
             Grupa gr = new Grupa() { Nazwa = "zapisik", Studenci = Students };
             gr.ZapiszDoPliku("koksik");
+        }
+
+        private void btnWybierz_Click(object sender, RoutedEventArgs e)
+        {
+            var filePath = string.Empty;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = "G:\\";
+            openFileDialog.Filter = "bmp files (*.bmp)|*.bmp|All files (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                filePath = openFileDialog.FileName;
+               
+            }
+
+            Bitmap image = new Bitmap(filePath, true);
+            BITMAPINFOHEADER bi = new BITMAPINFOHEADER();
+           
+            lblSzerokosc.Content = image.Width;
+            lblWysokosc.Content = image.Height;
+            lblKolor.Content = bi.biBitCount;
+
         }
     }
 }
